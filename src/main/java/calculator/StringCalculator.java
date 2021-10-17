@@ -37,6 +37,7 @@ class StringCalculator {
 
     private int getSum(String[] numbers)
     {
+    	checkValidInput(numbers);
     	findDanderInput(numbers);
     	int sum=0;
     	for(String num:numbers)
@@ -46,6 +47,12 @@ class StringCalculator {
     		sum+=getInt(num);
     	}
     	return sum;
+    }
+    private void checkValidInput(String[] numbers)
+    {
+    		if(numbers[numbers.length]=="\n")
+    			throw new IllegalArgumentException("invalid number found");
+    	
     }
     private void findDanderInput(String[] numbers)
     {
