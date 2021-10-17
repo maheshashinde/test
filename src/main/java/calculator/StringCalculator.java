@@ -1,9 +1,10 @@
 package calculator;
 
 class StringCalculator {
-
+	private final String delimiter=",|\n";
     public int add(String input) {
-    	String numbers[]=input.split(",|\n");
+    	
+    	String numbers[]=input.split(delimiter);
     	if(input.isEmpty())
     		return 0;
     	if(input.length()==1)
@@ -17,6 +18,8 @@ class StringCalculator {
     	int sum=0;
     	for(String num:numbers)
     	{
+    		if(getInt(num)<0)
+    			throw new IllegalArgumentException("negative number found");
     		sum+=getInt(num);
     	}
     	return sum;
