@@ -3,7 +3,7 @@ package calculator;
 class StringCalculator {
 	private String delimiter;
 	private String numbers;
-	
+	private int num1;
 	public StringCalculator() {
 		this.delimiter=",|\n";
 	}
