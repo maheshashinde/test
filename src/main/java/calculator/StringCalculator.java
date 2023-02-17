@@ -1,4 +1,5 @@
 package calculator;
+import java.util.*;
 
 class StringCalculator {
 	private String delimiter;
@@ -37,6 +38,7 @@ class StringCalculator {
 
     private int getSum(String[] numbers)
     {
+	Scanner sc=new Scanner(System.in);
     	checkValidInput(numbers);
     	findDanderInput(numbers);
     	int sum=0;
