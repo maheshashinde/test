@@ -12,7 +12,7 @@ public class heloo {
       
       // Get user input
       Scanner sc=new Scanner(System.in);
-      String username = sc.next();;
+      String username = sc.nextLine();
       
       // Construct SQL query
       String sql = "SELECT * FROM users WHERE username = '" + username + "'";
