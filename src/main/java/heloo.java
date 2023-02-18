@@ -1,5 +1,6 @@
 import java.io.*;
 import java.sql.*;
+import java.util.*;
 
 public class heloo {
    
@@ -10,7 +11,8 @@ public class heloo {
       Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase", "username", "password");
       
       // Get user input
-      String username = args[0];
+      Scanner sc=new Scanner(System.in);
+      String username = sc.next();;
       
       // Construct SQL query
       String sql = "SELECT * FROM users WHERE username = '" + username + "'";
